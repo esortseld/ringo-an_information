@@ -69,6 +69,11 @@
       min-width: 920px;
     }
 
+    .songs-table,
+    .archive-table {
+      min-width: 640px;
+    }
+
     th,
     td {
       padding: 14px 12px;
@@ -103,6 +108,28 @@
       font-weight: 700;
     }
 
+    .status {
+      display: inline-block;
+      min-width: 5.5em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .status.done {
+      color: #1f5c3a;
+      background: #e7f3ec;
+      border: 1px solid #b9dcc8;
+    }
+
+    .status.pending {
+      color: #8f1d1d;
+      background: #fff0ed;
+      border: 1px solid #f0c3bd;
+    }
+
     @media (max-width: 600px) {
       header {
         padding: 28px 16px 20px;
@@ -121,11 +148,16 @@
       }
 
       table {
-        min-width: 520px;
+        min-width: 560px;
       }
 
       .live-table {
         min-width: 860px;
+      }
+
+      .songs-table,
+      .archive-table {
+        min-width: 620px;
       }
 
       th,
@@ -150,20 +182,84 @@
             <tr>
               <th scope="col">日程</th>
               <th scope="col">時間</th>
+              <th scope="col">場所</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>2026年6月20日（土）</td>
               <td>15:00〜18:00</td>
+              <td>いつものところ</td>
             </tr>
             <tr>
               <td>2026年7月11日（土）</td>
               <td>14:00〜17:00</td>
+              <td>いつものところ</td>
             </tr>
             <tr>
               <td>2026年8月22日（土）</td>
               <td>14:00〜17:00</td>
+              <td>いつものところ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="songs">
+      <h2 id="songs">課題曲</h2>
+      <div class="table-wrap" role="region" aria-label="課題曲の表" tabindex="0">
+        <table class="songs-table">
+          <thead>
+            <tr>
+              <th scope="col">曲名</th>
+              <th scope="col">ライブ実績</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>幸福論</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>歌舞伎町の女王</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>ここでキスして。</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>正しい街</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>罪と罰</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>スーパースター</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>アイデンティティ</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>群青日和</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>丸ノ内サディスティック</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>雨傘</td>
+              <td><span class="status done">ライブ済み</span></td>
+            </tr>
+            <tr>
+              <td>新しい文明開化</td>
+              <td><span class="status pending">ライブ未済</span></td>
             </tr>
           </tbody>
         </table>
@@ -216,6 +312,28 @@
               <td><span class="tbc">TBC</span></td>
               <td><span class="tbc">TBC</span></td>
               <td><span class="tbc">TBC</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="live-archive">
+      <h2 id="live-archive">過去のライブアーカイブ</h2>
+      <div class="table-wrap" role="region" aria-label="過去のライブアーカイブの表" tabindex="0">
+        <table class="archive-table">
+          <thead>
+            <tr>
+              <th scope="col">日程</th>
+              <th scope="col">会場</th>
+              <th scope="col">イベント名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026年5月30日（土）</td>
+              <td>WAON</td>
+              <td>cord of friends</td>
             </tr>
           </tbody>
         </table>
