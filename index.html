@@ -18,7 +18,7 @@
     }
 
     header {
-      padding: 32px 20px 24px;
+      padding: 34px 20px 26px;
       text-align: center;
       background: #8f1d1d;
       color: #fff;
@@ -31,7 +31,7 @@
     }
 
     main {
-      width: min(920px, 100%);
+      width: min(1080px, 100%);
       margin: 0 auto;
       padding: 28px 16px 48px;
     }
@@ -50,18 +50,42 @@
       color: #8f1d1d;
     }
 
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid #eadbd0;
+      border-radius: 8px;
+      background: #fffdfb;
+    }
+
     table {
       width: 100%;
+      min-width: 560px;
       border-collapse: collapse;
-      table-layout: fixed;
+    }
+
+    .live-table {
+      min-width: 920px;
     }
 
     th,
     td {
       padding: 14px 12px;
-      border: 1px solid #eadbd0;
+      border-right: 1px solid #eadbd0;
+      border-bottom: 1px solid #eadbd0;
       text-align: left;
-      overflow-wrap: anywhere;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: 0;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
     }
 
     th {
@@ -72,6 +96,11 @@
 
     td {
       background: #fffdfb;
+    }
+
+    .tbc {
+      color: #c1121f;
+      font-weight: 700;
     }
 
     @media (max-width: 600px) {
@@ -87,42 +116,22 @@
         padding: 16px;
       }
 
-      table,
-      thead,
-      tbody,
-      tr,
+      .table-wrap {
+        border-radius: 8px;
+      }
+
+      table {
+        min-width: 520px;
+      }
+
+      .live-table {
+        min-width: 860px;
+      }
+
       th,
       td {
-        display: block;
-        width: 100%;
-      }
-
-      thead {
-        display: none;
-      }
-
-      tr {
-        border: 1px solid #eadbd0;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      td {
-        display: grid;
-        grid-template-columns: 5.5em 1fr;
-        gap: 12px;
-        border: 0;
-        border-bottom: 1px solid #eadbd0;
-      }
-
-      td:last-child {
-        border-bottom: 0;
-      }
-
-      td::before {
-        content: attr(data-label);
-        font-weight: 700;
-        color: #4b2b22;
+        padding: 12px 10px;
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -135,42 +144,82 @@
   <main>
     <section aria-labelledby="studio-schedule">
       <h2 id="studio-schedule">スタジオ練習予定</h2>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">日にち</th>
-            <th scope="col">時間</th>
-            <th scope="col">場所</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="日にち">未定</td>
-            <td data-label="時間">未定</td>
-            <td data-label="場所">未定</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap" role="region" aria-label="スタジオ練習予定の表" tabindex="0">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">日程</th>
+              <th scope="col">時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026年6月20日（土）</td>
+              <td>15:00〜18:00</td>
+            </tr>
+            <tr>
+              <td>2026年7月11日（土）</td>
+              <td>14:00〜17:00</td>
+            </tr>
+            <tr>
+              <td>2026年8月22日（土）</td>
+              <td>14:00〜17:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section aria-labelledby="live-schedule">
       <h2 id="live-schedule">ライブ予定</h2>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">日にち</th>
-            <th scope="col">時間</th>
-            <th scope="col">場所</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="日にち">未定</td>
-            <td data-label="時間">未定</td>
-            <td data-label="場所">未定</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap" role="region" aria-label="ライブ予定の表" tabindex="0">
+        <table class="live-table">
+          <thead>
+            <tr>
+              <th scope="col">日程</th>
+              <th scope="col">会場</th>
+              <th scope="col">場所</th>
+              <th scope="col">集合</th>
+              <th scope="col">開場</th>
+              <th scope="col">開演</th>
+              <th scope="col">出演時間</th>
+              <th scope="col">持ち時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026年7月18日（土）</td>
+              <td>Memory Lane</td>
+              <td>栄</td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td>18:30</td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+            </tr>
+            <tr>
+              <td>2026年8月1日（土）</td>
+              <td>Strawberry Fields</td>
+              <td>江南</td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+            </tr>
+            <tr>
+              <td>2026年9月5日（土）</td>
+              <td>アルマジロ</td>
+              <td>本郷</td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+              <td><span class="tbc">TBC</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 </body>
