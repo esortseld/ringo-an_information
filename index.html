@@ -50,12 +50,6 @@
       color: #8f1d1d;
     }
 
-    h3 {
-      margin: 24px 0 12px;
-      font-size: clamp(1.1rem, 4vw, 1.35rem);
-      color: #4b2b22;
-    }
-
     .table-wrap {
       width: 100%;
       overflow-x: auto;
@@ -76,10 +70,9 @@
     }
 
     .songs-table {
-      min-width: 1060px;
+      min-width: 820px;
     }
 
-    .legend-table,
     .archive-table {
       min-width: 640px;
     }
@@ -114,8 +107,7 @@
     }
 
     .comment-cell,
-    .tone-cell,
-    .legend-songs {
+    .tone-cell {
       white-space: normal;
       min-width: 220px;
     }
@@ -123,19 +115,6 @@
     .tbc {
       color: #c1121f;
       font-weight: 700;
-    }
-
-    .mark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.2em;
-      min-height: 2.2em;
-      border-radius: 999px;
-      background: #8f1d1d;
-      color: #fff;
-      font-weight: 800;
-      line-height: 1;
     }
 
     @media (max-width: 600px) {
@@ -173,8 +152,7 @@
         font-size: 0.95rem;
       }
 
-      .songs-wrap,
-      .legend-wrap {
+      .songs-wrap {
         overflow-x: visible;
         border: 0;
         border-radius: 0;
@@ -182,31 +160,24 @@
       }
 
       .songs-table,
-      .legend-table,
       .songs-table tbody,
-      .legend-table tbody,
       .songs-table tr,
-      .legend-table tr,
-      .songs-table td,
-      .legend-table td {
+      .songs-table td {
         display: block;
         width: 100%;
         min-width: 0;
       }
 
-      .songs-table,
-      .legend-table {
+      .songs-table {
         border-collapse: separate;
         border-spacing: 0;
       }
 
-      .songs-table thead,
-      .legend-table thead {
+      .songs-table thead {
         display: none;
       }
 
-      .songs-table tr,
-      .legend-table tr {
+      .songs-table tr {
         margin: 0 0 14px;
         padding: 14px;
         border: 1px solid #eadbd0;
@@ -214,13 +185,11 @@
         background: #fffdfb;
       }
 
-      .songs-table tr:last-child,
-      .legend-table tr:last-child {
+      .songs-table tr:last-child {
         margin-bottom: 0;
       }
 
-      .songs-table td,
-      .legend-table td {
+      .songs-table td {
         padding: 0;
         border: 0;
         background: transparent;
@@ -228,13 +197,11 @@
         font-size: 1rem;
       }
 
-      .songs-table td + td,
-      .legend-table td + td {
+      .songs-table td + td {
         margin-top: 10px;
       }
 
-      .songs-table td::before,
-      .legend-table td::before {
+      .songs-table td::before {
         content: attr(data-label);
         display: block;
         margin-bottom: 2px;
@@ -252,15 +219,8 @@
       }
 
       .songs-table .comment-cell,
-      .songs-table .tone-cell,
-      .legend-table .legend-songs {
+      .songs-table .tone-cell {
         overflow-wrap: anywhere;
-      }
-
-      .mark {
-        width: 2.45em;
-        min-height: 2.45em;
-        font-size: 1.05rem;
       }
     }
   </style>
@@ -297,161 +257,6 @@
               <td>2026年8月22日（土）</td>
               <td>14:00〜17:00</td>
               <td>いつものところ</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section aria-labelledby="songs">
-      <h2 id="songs">課題曲</h2>
-      <div class="table-wrap songs-wrap" role="region" aria-label="課題曲一覧の表" tabindex="0">
-        <table class="songs-table">
-          <thead>
-            <tr>
-              <th scope="col">順</th>
-              <th scope="col">曲名</th>
-              <th scope="col">分数</th>
-              <th scope="col">知名度</th>
-              <th scope="col">記号</th>
-              <th scope="col">曲調・テンポ感</th>
-              <th scope="col">コメント</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="順">1</td>
-              <td class="song-title" data-label="曲名">丸ノ内サディスティック</td>
-              <td data-label="分数">3:56</td>
-              <td data-label="知名度">非常に高い</td>
-              <td data-label="記号"><span class="mark">B</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／ジャズロック</td>
-              <td class="comment-cell" data-label="コメント">椎名林檎の代表曲級。ファン以外にも通じやすい。</td>
-            </tr>
-            <tr>
-              <td data-label="順">2</td>
-              <td class="song-title" data-label="曲名">群青日和</td>
-              <td data-label="分数">3:33</td>
-              <td data-label="知名度">高い</td>
-              <td data-label="記号"><span class="mark">A</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">速め／疾走ロック</td>
-              <td class="comment-cell" data-label="コメント">東京事変の代表曲。バンド曲として知名度が高い。</td>
-            </tr>
-            <tr>
-              <td data-label="順">3</td>
-              <td class="song-title" data-label="曲名">歌舞伎町の女王</td>
-              <td data-label="分数">2:56</td>
-              <td data-label="知名度">高い</td>
-              <td data-label="記号"><span class="mark">B</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／昭和歌謡ロック</td>
-              <td class="comment-cell" data-label="コメント">初期の代表曲。椎名林檎らしさが分かりやすい。</td>
-            </tr>
-            <tr>
-              <td data-label="順">4</td>
-              <td class="song-title" data-label="曲名">ここでキスして。</td>
-              <td data-label="分数">4:20</td>
-              <td data-label="知名度">高い</td>
-              <td data-label="記号"><span class="mark">C</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ややゆったり／ミドルロック</td>
-              <td class="comment-cell" data-label="コメント">初期シングルで一般知名度も比較的高い。</td>
-            </tr>
-            <tr>
-              <td data-label="順">5</td>
-              <td class="song-title" data-label="曲名">罪と罰</td>
-              <td data-label="分数">5:33</td>
-              <td data-label="知名度">高め</td>
-              <td data-label="記号"><span class="mark">D</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ゆったり／重めロック</td>
-              <td class="comment-cell" data-label="コメント">代表曲の一つ。曲名の認知度も高い。</td>
-            </tr>
-            <tr>
-              <td data-label="順">6</td>
-              <td class="song-title" data-label="曲名">幸福論</td>
-              <td data-label="分数">3:42</td>
-              <td data-label="知名度">中〜高</td>
-              <td data-label="記号"><span class="mark">B</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／ポップロック</td>
-              <td class="comment-cell" data-label="コメント">デビュー曲として知られる。世代によって認知差あり。</td>
-            </tr>
-            <tr>
-              <td data-label="順">7</td>
-              <td class="song-title" data-label="曲名">正しい街</td>
-              <td data-label="分数">3:53</td>
-              <td data-label="知名度">中</td>
-              <td data-label="記号"><span class="mark">C</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ややゆったり／ミドルロック</td>
-              <td class="comment-cell" data-label="コメント">アルバム曲としては有名。ファンにはかなり通じる。</td>
-            </tr>
-            <tr>
-              <td data-label="順">8</td>
-              <td class="song-title" data-label="曲名">新しい文明開化</td>
-              <td data-label="分数">4:28</td>
-              <td data-label="知名度">中</td>
-              <td data-label="記号"><span class="mark">A</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">速め／疾走ロック</td>
-              <td class="comment-cell" data-label="コメント">東京事変ファンには有名。一般知名度は代表曲より下がる。</td>
-            </tr>
-            <tr>
-              <td data-label="順">9</td>
-              <td class="song-title" data-label="曲名">アイデンティティ</td>
-              <td data-label="分数">3:05</td>
-              <td data-label="知名度">中</td>
-              <td data-label="記号"><span class="mark">A</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">速め／疾走ロック</td>
-              <td class="comment-cell" data-label="コメント">ライブ・ファン人気はあるが、一般認知はやや限定的。</td>
-            </tr>
-            <tr>
-              <td data-label="順">10</td>
-              <td class="song-title" data-label="曲名">雨傘</td>
-              <td data-label="分数">3:47</td>
-              <td data-label="知名度">低〜中</td>
-              <td data-label="記号"><span class="mark">B</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／歌謡ポップ</td>
-              <td class="comment-cell" data-label="コメント">椎名林檎提供曲として知る人はいるが、本人代表曲ほどではない。</td>
-            </tr>
-            <tr>
-              <td data-label="順">11</td>
-              <td class="song-title" data-label="曲名">スーパースター</td>
-              <td data-label="分数">4:28</td>
-              <td data-label="知名度">低〜中</td>
-              <td data-label="記号"><span class="mark">D</span></td>
-              <td class="tone-cell" data-label="曲調・テンポ感">ゆったり／バラード寄り</td>
-              <td class="comment-cell" data-label="コメント">東京事変ファンには知られるが、一般向け知名度は控えめ。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>曲調記号の見方</h3>
-      <div class="table-wrap legend-wrap" role="region" aria-label="曲調記号の見方の表" tabindex="0">
-        <table class="legend-table">
-          <thead>
-            <tr>
-              <th scope="col">記号</th>
-              <th scope="col">系統</th>
-              <th scope="col">該当曲</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="記号"><span class="mark">A</span></td>
-              <td data-label="系統">速め・疾走系</td>
-              <td class="legend-songs" data-label="該当曲">群青日和／新しい文明開化／アイデンティティ</td>
-            </tr>
-            <tr>
-              <td data-label="記号"><span class="mark">B</span></td>
-              <td data-label="系統">ミドル系</td>
-              <td class="legend-songs" data-label="該当曲">丸ノ内サディスティック／歌舞伎町の女王／幸福論／雨傘</td>
-            </tr>
-            <tr>
-              <td data-label="記号"><span class="mark">C</span></td>
-              <td data-label="系統">ややゆったり系</td>
-              <td class="legend-songs" data-label="該当曲">ここでキスして。／正しい街</td>
-            </tr>
-            <tr>
-              <td data-label="記号"><span class="mark">D</span></td>
-              <td data-label="系統">ゆったり・重め系</td>
-              <td class="legend-songs" data-label="該当曲">罪と罰／スーパースター</td>
             </tr>
           </tbody>
         </table>
@@ -526,6 +331,102 @@
               <td>2026年5月30日（土）</td>
               <td>WAON</td>
               <td>cord of friends</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="songs">
+      <h2 id="songs">課題曲</h2>
+      <div class="table-wrap songs-wrap" role="region" aria-label="課題曲一覧の表" tabindex="0">
+        <table class="songs-table">
+          <thead>
+            <tr>
+              <th scope="col">曲名</th>
+              <th scope="col">分数</th>
+              <th scope="col">知名度</th>
+              <th scope="col">曲調・テンポ感</th>
+              <th scope="col">コメント</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="song-title" data-label="曲名">丸ノ内サディスティック</td>
+              <td data-label="分数">3:56</td>
+              <td data-label="知名度">非常に高い</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／ジャズロック</td>
+              <td class="comment-cell" data-label="コメント">椎名林檎の代表曲級。ファン以外にも通じやすい。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">群青日和</td>
+              <td data-label="分数">3:33</td>
+              <td data-label="知名度">高い</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">速め／疾走ロック</td>
+              <td class="comment-cell" data-label="コメント">東京事変の代表曲。バンド曲として知名度が高い。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">歌舞伎町の女王</td>
+              <td data-label="分数">2:56</td>
+              <td data-label="知名度">高い</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／昭和歌謡ロック</td>
+              <td class="comment-cell" data-label="コメント">初期の代表曲。椎名林檎らしさが分かりやすい。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">ここでキスして。</td>
+              <td data-label="分数">4:20</td>
+              <td data-label="知名度">高い</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ややゆったり／ミドルロック</td>
+              <td class="comment-cell" data-label="コメント">初期シングルで一般知名度も比較的高い。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">罪と罰</td>
+              <td data-label="分数">5:33</td>
+              <td data-label="知名度">高め</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ゆったり／重めロック</td>
+              <td class="comment-cell" data-label="コメント">代表曲の一つ。曲名の認知度も高い。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">幸福論</td>
+              <td data-label="分数">3:42</td>
+              <td data-label="知名度">中〜高</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／ポップロック</td>
+              <td class="comment-cell" data-label="コメント">デビュー曲として知られる。世代によって認知差あり。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">正しい街</td>
+              <td data-label="分数">3:53</td>
+              <td data-label="知名度">中</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ややゆったり／ミドルロック</td>
+              <td class="comment-cell" data-label="コメント">アルバム曲としては有名。ファンにはかなり通じる。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">新しい文明開化</td>
+              <td data-label="分数">4:28</td>
+              <td data-label="知名度">中</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">速め／疾走ロック</td>
+              <td class="comment-cell" data-label="コメント">東京事変ファンには有名。一般知名度は代表曲より下がる。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">アイデンティティ</td>
+              <td data-label="分数">3:05</td>
+              <td data-label="知名度">中</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">速め／疾走ロック</td>
+              <td class="comment-cell" data-label="コメント">ライブ・ファン人気はあるが、一般認知はやや限定的。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">雨傘</td>
+              <td data-label="分数">3:47</td>
+              <td data-label="知名度">低〜中</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ミドル／歌謡ポップ</td>
+              <td class="comment-cell" data-label="コメント">椎名林檎提供曲として知る人はいるが、本人代表曲ほどではない。</td>
+            </tr>
+            <tr>
+              <td class="song-title" data-label="曲名">スーパースター</td>
+              <td data-label="分数">4:28</td>
+              <td data-label="知名度">低〜中</td>
+              <td class="tone-cell" data-label="曲調・テンポ感">ゆったり／バラード寄り</td>
+              <td class="comment-cell" data-label="コメント">東京事変ファンには知られるが、一般向け知名度は控えめ。</td>
             </tr>
           </tbody>
         </table>
